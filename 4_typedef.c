@@ -20,8 +20,8 @@ int main(void)
 
 typedef int (*PARR3)[3];
 
-// int (*foo())[3]
-PARR3 foo()
+// PARR3 foo()
+int (*foo())[3]
 {
     static int x[3] = { 10, 20, 30 };
     return &x;
@@ -31,3 +31,13 @@ PARR3 foo()
 int main(void)
 {
 }
+
+int (*foo())[3];
+// foo()
+// -> foo는 함수 입니다.
+
+// (*foo())
+// -> 반환 타입은 포인터입니다.
+
+// int (*foo())[3]
+// -> 포인터가 가르키는 타입은 int[3] 배열입니다.
