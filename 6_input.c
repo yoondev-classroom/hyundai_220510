@@ -52,13 +52,47 @@ int main()
     return 0;
 }
 #endif
-
+#if 0
 int main()
 {
     int n1, n2, n3;
     int ret = scanf("%d %d %d", &n1, &n2, &n3);
 
-    printf("ret: %d\n", ret);
+    printf("ret: %d\n", ret); // 표준 출력 
+    // == fprintf(stdout, "ret: %d\n", ret);
+
+    return 0;
+}
+#endif
+
+// 파일 입출력
+// => 표준 입출력과 사용 방법이 동일합니다.
+#if 0
+int main()
+{
+    FILE* fp = fopen("a.txt", "w");
+
+    fprintf(fp, "Hello, world\n");
+    fprintf(fp, "Hello, world\n");
+    fprintf(fp, "Hello, world\n");
+
+    fclose(fp);
+
+    return 0;
+}
+#endif
+
+int main()
+{
+    FILE* fp = fopen("a.txt", "r");
+
+    int a, b, c, d;
+    // scanf("%d %d %d %d", &a, &b, &c, &d);
+    fscanf(fp, "%d %d %d %d", &a, &b, &c, &d);
+
+    printf("%d %d %d %d\n", a, b, c, d);
+
+    fclose(fp);
 
     return 0;
 }
