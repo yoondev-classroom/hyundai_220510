@@ -18,6 +18,16 @@ int main(void)
 // 2. typedef 활용
 // > 복잡한 타입 표현식을 typedef를 통해 간결하게 표현할 수 있습니다.
 
-int main()
+typedef int (*PARR3)[3];
+
+// int (*foo())[3]
+PARR3 foo()
+{
+    static int x[3] = { 10, 20, 30 };
+    return &x;
+    // int(*)[3]
+}
+
+int main(void)
 {
 }
