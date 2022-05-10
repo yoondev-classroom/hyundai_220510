@@ -30,7 +30,7 @@
 // - 프로그래머가 원하는 시점에 생성하고, 프로그래머가 원하는 시점에 파괴할 수 있습니다.
 // - free를 잊을 경우, 메모리 누수 문제점이 있습니다.
 // - 할당/해지의 오버헤드가 존재합니다.
-
+#if 0
 int g1; // 전역 변수
 static int g2;
 // extern int g;
@@ -41,6 +41,53 @@ int main()
     static int b; // 정적 지역 변수, 내부 정적 변수
 
     printf("a: %d\n", a);
+
+    return 0;
+}
+#endif
+// 7. 타입
+// => 타입의 크기에 따라서 메모리 할당 크기가 결정됩니다.
+//  - 64bit
+//       char   - 1byte
+//      > 부호가 있는지 없는지는 컴파일러마다 다릅니다.
+//     : signed char: -128 ~ 127
+//     : unsigned char: 0 ~ 255
+
+//    short  - 2byte
+//    int    - 4byte
+//    long      - 4byte(Windows) / 8byte(Linux)
+//    long long - 8byte
+
+#if 0
+#include <stdint.h>
+
+int main()
+{
+    char c;
+
+    int32_t a;
+    int64_t b;
+
+    printf("%lu\n", sizeof(long long));
+    return 0;
+}
+#endif
+
+//    float - 4byte
+//    double - 8byte
+//   > 부동 소수점 타입
+//    - 오차가 있습니다.
+//    - 동등성 비교가 불가능합니다.
+int main()
+{
+    double a = 0.7;
+    double b = 0.1 * 7;
+
+    if (a == b) {
+        printf("같다\n");
+    } else {
+        printf("다르다\n");
+    }
 
     return 0;
 }
