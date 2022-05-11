@@ -9,6 +9,8 @@
 
 void print_array(int (*arr)[3], int n)
 {
+    printf("%lu\n", sizeof(arr)); // ?
+
     // int* -> * -> int
     // double* -> * -> double
     // int(*)[3] -> * -> int[3]
@@ -40,7 +42,16 @@ int main(void)
     // print_array(&x[0], 2);
 
     // int* p[3];   // [int*][int*][int*]
+    // - sizeof(p): 24
+
     // int(*p)[3]; // * ---> int[3]
+    // - sizeof(p): 8
+
+    int n = 100;
+    int* pn = &n;
+
+    *pn = 200;
+    printf("%d\n", *pn);
 
     return 0;
 }
