@@ -92,3 +92,31 @@ int main()
     printf("main: %lu\n", sizeof(x)); // 12
     foo(x); // foo(&x[0])
 }
+
+
+// C / C++ 
+// a.c     -> a.o   ->   a.out / a.exe
+
+// LLVM
+// C/C++  -> IL -> a.o -> a.out
+
+
+// Java
+// A.java  -> A.class(ByteCode, IL) <- VM(java.exe / java)
+//       compile
+// Jython
+// JRuby
+// Closure
+// Kotlin
+// Scala
+
+
+// Mono Project
+
+// C# / A.cs    -> A.obj(IL) <- CLR
+// C++
+// VB
+// F#
+
+
+// Write Once, Run Anywhere

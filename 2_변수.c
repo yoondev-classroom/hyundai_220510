@@ -33,7 +33,7 @@
 #if 0
 int g1; // 전역 변수
 static int g2;
-// extern int g;
+
 
 int main()
 {
