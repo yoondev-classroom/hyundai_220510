@@ -69,6 +69,8 @@ int main()
     printf("%p\n", p1);
     printf("%p\n", p2);
 
+    printf("%x\n", *p2);
+
     printf("%x %x %x %x\n",
         p2[0], p2[1], p2[2], p2[3]);
 
@@ -80,15 +82,15 @@ int main()
 }
 #endif
 
-int main(void)
-{
-    int arr[3] = { 10, 20, 30 };
+// int main(void)
+// {
+//     int arr[3] = { 10, 20, 30 };
 
-    int* p1 = arr; // &arr[0]
-    printf("%lu\n", sizeof(*p1)); // int
+//     int* p1 = arr; // &arr[0]
+//     printf("%lu\n", sizeof(*p1)); // int
 
-    int(*p2)[3] = &arr;
-    printf("%lu\n", sizeof(*p2)); // int[3]
+//     int(*p2)[3] = &arr;
+//     printf("%lu\n", sizeof(*p2)); // int[3]
 
-    return 0;
-}
+//     return 0;
+// }
