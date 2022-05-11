@@ -1,5 +1,5 @@
 // c.c
-#include "test.h"
+// #include "test.h"
 #include <stdio.h>
 
 #include "test.h"
