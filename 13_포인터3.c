@@ -9,6 +9,7 @@
 //    - 절대하면 안됩니다.
 // #define NULL 0
 
+// 3. 포인터가 가리키는 것이 없는 경우 NULL 포인터라고 합니다.
 int main(void)
 {
     // int* p = 0;
