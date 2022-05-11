@@ -58,7 +58,7 @@ int main(void)
 }
 #endif
 
-#if 0
+#if 1
 int main()
 {
     int n = 0x12345678;
