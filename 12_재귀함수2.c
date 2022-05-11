@@ -31,6 +31,7 @@ int factorial1(int n)
 // n=1 ->1
 // n   ->f(n-1) + f(n-2)
 
+/*
 int fib(int n)
 {
     if (n == 0)
@@ -39,6 +40,28 @@ int fib(int n)
         return 1;
 
     return fib(n - 1) + fib(n - 2);
+}
+*/
+
+// Dynamic Programming
+// => 동적 계획법
+// => 계산의 결과를 캐시해서, 재활용할 수 있도록 만들어줍니다.
+long data[1024] = {
+    0,
+};
+
+int fib(int n)
+{
+    if (n == 0)
+        return 0;
+    if (n == 1)
+        return 1;
+
+    if (data[n] != 0)
+        return data[n];
+
+    data[n] = fib(n - 1) + fib(n - 2);
+    return data[n];
 }
 
 // 재귀 함수의 장점
@@ -50,4 +73,6 @@ int fib(int n)
 
 int main(void)
 {
+    int ret = fib(320);
+    printf("%d\n", ret);
 }
