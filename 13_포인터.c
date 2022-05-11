@@ -51,12 +51,21 @@ void inc(int* p)
     ++(*p);
 }
 
+int inc2(int n)
+{
+    return ++n;
+}
+
 int main(void)
 {
     int n = 0;
     inc(&n);
     inc(&n);
     inc(&n);
+
+    n = inc2(n);
+    n = inc2(n);
+    n = inc2(n);
 
     printf("%d\n", n);
 
