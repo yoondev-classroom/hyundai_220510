@@ -45,7 +45,7 @@ int main(void)
 }
 #endif
 
-// call by reference
+// call by reference / call by pointer
 void inc(int* p)
 {
     ++(*p);

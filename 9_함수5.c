@@ -19,6 +19,8 @@ int main(void)
 {
 }
 
+
+// 상호 재귀
 void goo(void)
 {
     printf("goo\n");

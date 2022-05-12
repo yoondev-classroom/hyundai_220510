@@ -13,6 +13,9 @@
 //  - 변하는 것과 변하지 않는 것을 분리합니다.
 //  => 변하는 것을 인자를 통해 전달받습니다.
 
+// print_array
+// printArray
+// PrintArray
 void print_array(int* arr, int n)
 {
     for (int i = 0; i < n; ++i) {
