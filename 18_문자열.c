@@ -51,7 +51,7 @@ int main(void)
 #include <ctype.h>
 // 소문자인지 판단하고, 대문자인지 판단하고,
 // 소문자를 대문자로 변경하고, 대문자를 소문자로 변경하는 함수가 이미 존재합니다.
-
+#if 0
 int main(void)
 {
     char c;
@@ -64,6 +64,22 @@ int main(void)
     }
 
     printf("%c\n", c);
+
+    return 0;
+}
+#endif
+
+// 한자리 숫자를 입력하였을 때,
+// 정수값으로 변경해서 출력하는 프로그램을 작성하시오
+int main(void)
+{
+    char c;
+    scanf("%c", &c);
+
+    if ('0' <= c && c <= '9') {
+        int n = c - '0';
+        printf("%d\n", n);
+    }
 
     return 0;
 }
