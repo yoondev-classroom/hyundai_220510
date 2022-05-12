@@ -41,7 +41,7 @@ int main(void)
     print_array(x, 2);
     // print_array(&x[0], 2);
 
-    // int* p[3];   // [int*][int*][int*]
+    // int *p[3];   // [int*][int*][int*]
     // - sizeof(p): 24
 
     // int(*p)[3]; // * ---> int[3]
