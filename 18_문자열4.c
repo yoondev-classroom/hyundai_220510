@@ -70,12 +70,38 @@ int main(void)
 }
 #endif
 
+unsigned long xstrlen(const char* str)
+{
+    // 1. for
+    /*
+    unsigned long len = 0;
+    for (const char* p = str; *p != '\0'; p++) {
+        len++;
+    }
+    return len;
+    */
+
+    /*
+    const char* p = str;
+    while (*p != '\0')
+        p++;
+
+    return p - str;
+    */
+
+    const char* p = str;
+    for (p = str; *p != '\0'; ++p)
+        /* Nothing*/;
+
+    return p - str;
+}
+
 // 5. 문자열 길이
 //  size_t strlen(const char* str);
 int main(void)
 {
     char str[32] = "hello";
-    printf("%lu\n", strlen(str));
+    printf("%lu\n", xstrlen(str));
 
     return 0;
 }
