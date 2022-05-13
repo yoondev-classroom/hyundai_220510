@@ -91,17 +91,35 @@ unsigned long xstrlen(const char* str)
 
     const char* p = str;
     for (p = str; *p != '\0'; ++p)
-        /* Nothing*/;
+        /* Nothing */;
 
     return p - str;
 }
 
 // 5. 문자열 길이
 //  size_t strlen(const char* str);
+#if 0
 int main(void)
 {
     char str[32] = "hello";
     printf("%lu\n", xstrlen(str));
+
+    return 0;
+}
+#endif
+
+int main(void)
+{
+    char c1 = ' ';
+    char c2 = '\n';
+    char c3 = '\t';
+    char c4 = '\\';
+
+    printf("123%c456", 32);
+
+    char str[]
+        = "hello \tworld\n";
+    printf("%lu\n", strlen(str));
 
     return 0;
 }
