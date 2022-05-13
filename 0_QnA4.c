@@ -87,6 +87,10 @@ int main(void)
     printf("%lu\n", sizeof(str)); // 6
 
     print_str(str);
+    // str => &str[0] => char*
+
+    // print_str(&str);
+    // str => char[6] => char(*)[6]
 
     return 0;
 }
