@@ -15,8 +15,16 @@
 // 5. 메모리 할당과 해지의 비용이 가장 큰 방법입니다.
 // 6. 메모리가 부족한 경우, malloc은 NULL(0)을 반환합니다.
 
+void foo()
+{
+    int* p = malloc(sizeof(int) * 100);
+    free(p);
+}
+
 int main(void)
 {
+    foo();
+
     // int * 10
     int* p1 = malloc(sizeof(int) * 10);
     if (p1 == NULL) {
