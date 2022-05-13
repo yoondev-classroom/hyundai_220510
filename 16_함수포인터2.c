@@ -10,8 +10,22 @@
 // => 함수의 시그니처가 동일하면 같은 타입입니다.
 
 // 3. 함수 포인터 변수를 통해서 함수를 호출할 수 있습니다.
+// 4. 함수 포인터를 사용하는 방법
+#if 0
+int (*fp)(int, int) = NULL;
 
-int add(int a, int b) { return a + b; }
+fp = &add;
+(*fp)(10, 20);
+
+fp = add;
+fp(10, 20);
+
+#endif
+
+int add(int a, int b)
+{
+    return a + b;
+}
 // int(int, int)
 
 int mul(int a, int b) { return a * b; }
