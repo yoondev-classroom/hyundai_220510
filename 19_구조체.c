@@ -70,5 +70,8 @@ int main(void)
     struct complex a = { 1, 1 };
     struct complex b = { 2, 2 };
 
-    add(a, b);
+    struct complex r = add(a, b);
+    printf("%d+%di\n", r.re, r.im);
+
+    return 0;
 }

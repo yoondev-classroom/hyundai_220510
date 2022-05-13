@@ -14,7 +14,17 @@ int main(void)
 {
     // POINT pt1 = { 10, 20 };
     // C99 - 멤버 지정 초기화
-    POINT pt1 = { .x = 10, .y = 20 };
+    // POINT pt1 = { .x = 10, .y = 20 };
+    POINT pt1 = {
+        0,
+    };
+
+    int a = 10;
+    int b = 20;
+    POINT pt2 = {
+        .x = a + b,
+        .y = 30 + 40,
+    };
 
     printf("%d %d\n", pt1.x, pt1.y);
 
