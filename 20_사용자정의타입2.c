@@ -17,7 +17,7 @@ const int THREAD_RUNNING = 1;
 const int THREAD_STOPPED = 2;
 
 int main(void)
-{
+{ 
     int task_state = TASK_READY;
     task_state = 100;
 }
