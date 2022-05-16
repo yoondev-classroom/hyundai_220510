@@ -49,8 +49,11 @@ int main(void)
 
     int n = 0;
     while (!feof(fp)) {
-        fread(user + n, sizeof(USER), 1, fp);
-        ++n;
+        int ret = fread(user + n, sizeof(USER), 1, fp);
+        printf("ret: %d\n", ret);
+        if (ret > 0) {
+            ++n;
+        }
     }
     printf("%d\n", n);
 
