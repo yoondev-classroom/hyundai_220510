@@ -31,6 +31,7 @@ int main(void)
     const char* str2 = "hello";
 
     // 1. 동적 메모리 할당
+    // - calloc은 할당한 메모리를 0으로 초기화해줍니다.
     char* p = malloc(strlen(str1) + strlen(str2) + 1);
 
     // 2. str2 복사 - strcpy
@@ -76,6 +77,7 @@ int main(void)
 
 // 2. strtok는 정적 지역 변수 / 전역 변수로 만들어져 있습니다.
 //  - 스레드 안전성이 없습니다.
+#if 0
 int main(void)
 {
     char s[] = "hello world show me the money";
@@ -94,6 +96,23 @@ int main(void)
         printf("%s\n", p);
         p = strtok(NULL, " ");
     }
+
+    return 0;
+}
+#endif
+
+int main(void)
+{
+    // char s1[100] = "hello";
+    const char* s1 = "hello";
+    const char* s2 = " world";
+
+    // strcat(s1, s2);
+    char* s = malloc(strlen(s1) + strlen(s2) + 1);
+    strcpy(s, s1); // "hello"
+    strcat(s, s2); // "hello world"
+
+    printf("%s\n", s1);
 
     return 0;
 }

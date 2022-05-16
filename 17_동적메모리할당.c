@@ -1,9 +1,9 @@
 // 17_동적메모리할당.c
 #include <stdio.h>
-// printf / scanf
+// printf(표준 출력 함수) / scanf(표준 입력 함수)
 
 #include <stdlib.h>
-// malloc / free
+// malloc / free / exit
 
 // 라이브러리
 // => 함수의 집합
@@ -22,6 +22,9 @@
 //   : 함수의 결과로 할당된 메모리의 주소를 반환합니다.
 // 6. malloc을 통해 할당한 메모리를 더 이상 사용하지 않을 경우, 반드시
 //    free를 통해 반납해야 합니다.
+// 7. malloc은 실패 가능한 함수입니다.
+//  => 메모리가 부족한 경우, NULL을 반환합니다.
+//     유효한 메모리가 할당되었는지 여부에 대한 오류 처리가 반드시 필요합니다.
 #if 0
 int main(void)
 {

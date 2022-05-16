@@ -8,6 +8,8 @@
 //   - 주소값을 저장하기 위해서만 사용합니다.
 //   - 연산이 불가능합니다.
 //   +, -, ++, --, *(참조)
+//   => 포인터가 가르키는 대상체의 크기(오프셋)을 기반으로 연산이
+//      수행됩니다.
 #if 0
 int main(void)
 {
@@ -22,8 +24,8 @@ int main(void)
     // *pv = 10;
     // : void*는 참조를 통해 값을 읽거나 변경하는 것이 불가능합니다.
 
-    int* p1 = malloc(4);
-    char* p2 = malloc(4);
+    int* p1 = malloc(sizeof(int));
+    char* p2 = malloc(sizeof(char) * 4);
 
     free(p1);
     free(p2);

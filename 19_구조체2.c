@@ -17,13 +17,27 @@ typedef struct point {
 } POINT;
 #endif
 
+// 태그명을 생략하는 것도 가능합니다.
 typedef struct {
     int x;
     int y;
 } POINT;
 
+struct xxx {
+    int x;
+    int y;
+} XXX1, XXX2;
+
+struct {
+    int x;
+    int y;
+} XXX3;
+
 int main(void)
 {
+    // XXX1 = XXX2;
+    XXX1 = XXX2;
+
     // struct point pt;
     POINT pt;
 }

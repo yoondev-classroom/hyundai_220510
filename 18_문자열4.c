@@ -56,12 +56,16 @@ int main(void)
 
 // 4. 문자열 복사 함수 - strcpy
 // char* strcpy(char* destination, const char* source);
-#if 0
+// => 복사되는 배열에는 충분한 메모리가 할당되어 있어야 합니다.
+#if 1
 int main(void)
 {
+    // int str3[2] = { 1, 2, 3 }; - error!
+
     char str1[6] = "hello";
     char str2[6];
 
+    // str2 = "hello"; // error!
     strcpy(str2, str1);
 
     printf("%s\n", str2);
