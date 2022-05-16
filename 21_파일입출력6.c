@@ -1,13 +1,5 @@
 #include <stdio.h>
 
-#pragma pack(1)
-
-struct point {
-    int x;
-    double y;
-    char z;
-};
-
 #if 0
 int main(void)
 {
@@ -39,6 +31,13 @@ int main(void)
      fwrite(const void * ptr, size_t size, size_t nitems,
          FILE * stream);
 #endif
+
+#pragma pack(1)
+struct point {
+    int x;
+    double y;
+    char z;
+};
 
 int main(void)
 {
