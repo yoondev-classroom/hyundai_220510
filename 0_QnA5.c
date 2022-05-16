@@ -66,6 +66,7 @@ int main(void)
 }
 #endif
 
+#if 0
 #include <pthread.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -104,6 +105,23 @@ int main(void)
     getchar();
 
     printf("n: %d\n", n);
+
+    return 0;
+}
+#endif
+
+#include <stdlib.h>
+
+int main(void)
+{
+    // int x[2][3];
+    // [ int[3] ][ int[3] ]
+    int(*x)[3] = (int(*)[3])malloc(sizeof(int[3]) * 2);
+
+    // int x2[6];
+    // [int][int][int][int][int][int]
+
+    int* x2 = (int*)malloc(sizeof(int) * 6);
 
     return 0;
 }
