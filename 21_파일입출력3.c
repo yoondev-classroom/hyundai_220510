@@ -13,5 +13,20 @@ int main(void)
     fscanf(fp, "%d", &n);
     printf("n = %d\n", n);
 
+    fclose(fp);
+
     return 0;
 }
+
+// mode
+//   r
+//   w
+//   a
+
+//   +
+//    r+
+//    w+
+//    a+
+
+//   t: Text
+//   b: Binary

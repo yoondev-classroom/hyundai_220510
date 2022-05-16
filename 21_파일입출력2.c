@@ -14,8 +14,10 @@
 //       - 열고자 하는 파일이 존재하는 경우, 파일의 크기를 0으로 만들어줍니다.
 
 //     - "a": write: 파일의 마지막부터 쓸 수 있습니다.
+//       - 열고자 하는 파일이 존재하지 않는 경우, 새로운 파일을 생성합니다.
 
 //  - fclose
+//   => struct FILE 구조체를 해지하고, 파일의 버퍼를 비어줍니다.
 
 #if 0
 typedef struct _file {
@@ -48,6 +50,8 @@ int main(void)
     int n = 10;
     fprintf(fp, "n = %d\n", n);
 #endif
+
+    fclose(fp);
 
     return 0;
 }
