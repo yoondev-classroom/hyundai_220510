@@ -110,6 +110,7 @@ int main(void)
 }
 #endif
 
+#if 0
 #include <stdlib.h>
 
 int main(void)
@@ -120,8 +121,24 @@ int main(void)
 
     // int x2[6];
     // [int][int][int][int][int][int]
-
     int* x2 = (int*)malloc(sizeof(int) * 6);
+
+    free(x);
+    free(x2);
+
+    return 0;
+}
+#endif
+
+// 배열 포인터
+// 포인터 배열
+int main(void)
+{
+    int(*x)[3];
+    // 배열(int[3])을 가르키는 포인터
+
+    int* x[3];
+    // 하나의 원소가 int*인 3개짜리 배열
 
     return 0;
 }
