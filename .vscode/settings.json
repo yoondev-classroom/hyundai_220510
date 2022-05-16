@@ -2,6 +2,8 @@
   "files.associations": {
     "stdint.h": "c",
     "test.h": "c",
-    "unistd.h": "c"
+    "unistd.h": "c",
+    "stdio.h": "c",
+    "_stdio.h": "c"
   }
 }
