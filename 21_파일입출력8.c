@@ -30,7 +30,9 @@ int main(void)
 //   SEEK_CUR: 현재 위치
 //   SEEK_END: 마지막 위치
 // 반환값
-//  - 성공 0, 실패 1
+//  - 성공 0, 실패 -1
+
+// https://devdocs.io/c/
 
 int main(void)
 {
