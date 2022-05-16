@@ -1,1 +1,10 @@
-42
+hello
+world
+show
+me
+the
+money
+show
+me 
+the
+money

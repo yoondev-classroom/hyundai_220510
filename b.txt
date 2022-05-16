@@ -1,0 +1,2 @@
+buf = hello
+buf = world
