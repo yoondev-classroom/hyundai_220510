@@ -23,6 +23,7 @@ int main(void)
 }
 #endif
 
+// 열거체
 enum task_state {
     TASK_READY = 0,
     TASK_RUNNING,
