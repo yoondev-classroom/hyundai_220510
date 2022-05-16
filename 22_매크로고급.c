@@ -44,11 +44,23 @@ int main(void)
     printf("x: %d\n", x)
 #endif
 
+// 2줄 이상의 매크로 함수는 do{}while(0)를 통해
+// 묶어줍니다.
+#if 0
 #define LOG(x)                \
     do {                      \
         printf("x: %d\n", x); \
         printf("x: %d\n", x); \
     } while (0)
+#endif
+
+// 일부 컴파일러에서 제대로 컴파일이 되지 않습니다.
+// => MSVC
+#define LOG(x)                \
+    ({                        \
+        printf("x: %d\n", x); \
+        printf("x: %d\n", x); \
+    })
 
 int main(void)
 {
