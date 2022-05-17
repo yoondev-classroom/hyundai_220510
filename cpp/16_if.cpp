@@ -20,11 +20,11 @@ void* goo()
 int main()
 {
     if (int ret = foo(); ret != 0) {
-        cout << "error!" << endl;
+        cerr << "error!" << endl;
     }
 
     if (void* ret = goo(); ret == NULL) {
-        cout << "error!" << endl;
+        cerr << "error!" << endl;
     }
 }
 
