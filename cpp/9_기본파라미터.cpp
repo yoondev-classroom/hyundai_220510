@@ -20,8 +20,10 @@ int add(int a, int b, int c = 0, int d = 0);
 int main()
 {
     int result = add(10, 20); // add(10, 20, 0, 0)
+    cout << result << endl;
 
     result = add(10, 20, 30); // add(10, 20, 30, 0)
+    cout << result << endl;
 
     // int result = add(10, 20, 0, 0);
     // result = add(10, 20, 30, 0);
