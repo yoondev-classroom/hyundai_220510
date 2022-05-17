@@ -1,0 +1,39 @@
+// 4_변수2.cpp
+#include <iostream>
+using namespace std;
+
+struct Point {
+    int x;
+    int y;
+};
+
+#if 0
+int main()
+{
+    // Copy Initialization
+    int n1 = 42;
+    int x1[3] = { 1, 2, 3 };
+    Point pt1 = { 10, 20 };
+
+    // Direct Initialization
+    int n2(42);
+    int x2[3] { 1, 2, 3 };
+    Point pt2 { 10, 20 };
+}
+#endif
+
+// C+11 - Uniform Initialization
+//  => 일관된 초기화
+//  => C++11
+int main()
+{
+    // Copy Initialization
+    int n1 = { 42 };
+    int x1[3] = { 1, 2, 3 };
+    Point pt1 = { 10, 20 };
+
+    // Direct Initialization
+    int n2 { 42 };
+    int x2[3] { 1, 2, 3 };
+    Point pt2 { 10, 20 };
+}
