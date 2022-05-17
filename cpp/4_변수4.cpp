@@ -19,5 +19,9 @@ int main()
     // auto n2; - error!
     // 반드시 초기화가 필요합니다.
 
+    constexpr int c = 10;
+    constexpr auto n3 = c;
+    // n3 = 1000;
+
     decltype(n) n2;
 }
