@@ -1,5 +1,6 @@
 // 3_iostream2.cpp
 
+#include <iomanip>
 #include <iostream>
 using namespace std;
 
@@ -8,7 +9,8 @@ using namespace std;
 // 0b1111101011111010 => 2진수 상수(C++11)
 
 // IO 조정자
-//  hex
+//  hex, uppercase, nouppercase, dev    - iostream
+//  setw, setfill                       - iomanip
 
 int main()
 {
@@ -26,4 +28,10 @@ int main()
 
     printf("%x %X %x\n", n, n, n);
     cout << hex << nouppercase << n << uppercase << n << nouppercase << n << endl;
+
+    printf("%10d\n", n);
+    cout << setw(10) << dec << n << endl;
+
+    printf("%010d\n", n);
+    cout << setw(10) << setfill('0') << n << endl;
 }
