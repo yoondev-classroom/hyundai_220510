@@ -17,8 +17,19 @@ void* goo()
 // C++17
 // : if-statement with initializer
 // - 조건문에서만 유효한 변수를 정의할 수 있습니다.
+//   : if, switch
+#if 1
 int main()
 {
+    switch (int n = 10; n) {
+    case 0:
+        break;
+    case 1:
+        break;
+    default:
+        printf("n: %d\n", n);
+    }
+
     if (int ret = foo(); ret != 0) {
         cerr << "error!" << endl;
     }
@@ -27,6 +38,7 @@ int main()
         cerr << "error!" << endl;
     }
 }
+#endif
 
 #if 0
 int main()
