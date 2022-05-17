@@ -33,8 +33,8 @@ int main()
 #if 1
 int main()
 {
-    std::string s1 = "hello";
-    std::string s2 = "hello";
+    std::string s1 { "hello" };
+    std::string s2 { "hello" };
 
     // == 연산자를 통해서 문자열을 비교할 수 있습니다.
     if (s1 == s2) {
