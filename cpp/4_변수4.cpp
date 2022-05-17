@@ -11,8 +11,13 @@ using namespace std;
 // decltype 연산자 - C++11
 // => '초기화 없이' 특정한 변수와 동일한 타입의 변수를 선언할 수 있습니다.
 
+void foo() { cout << "foo" << endl; }
+
 int main()
 {
+    auto fp = foo; // void(*)()
+    (*fp)();
+
     int x[5] = { 1, 2, 3, 4, 5 };
 
     auto n = x[2];
