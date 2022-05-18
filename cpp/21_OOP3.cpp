@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-// 2) 상태를 관리하는 멤버 데이터와 상태를 조작하는 함수를
+// 3) 상태를 관리하는 멤버 데이터와 상태를 조작하는 함수를
 //    묶기.
 //  - 객체(상태 + 행위)
 //  - OOP(Object Oriented Programming) : 객체 지향 프로그래밍
