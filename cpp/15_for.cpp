@@ -14,7 +14,7 @@ int main()
     }
 
     // 인덱스 정보가 필요하지 않을 때,
-    //  : ranged-for, C++11
+    //  : ranged-for, C++11 / foreach(C#) / 향상된 for(Java)
     //  + auto
     for (auto e : x) {
         cout << e << endl;
