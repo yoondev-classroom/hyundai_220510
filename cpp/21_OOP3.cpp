@@ -24,6 +24,7 @@ private:
 
 public:
     // 멤버 함수 / 메소드
+    // => 순서에 상관없이 참조 가능합니다.
     void init()
     {
         top = 0;
