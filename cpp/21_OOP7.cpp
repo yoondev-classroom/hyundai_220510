@@ -4,7 +4,10 @@ using namespace std;
 
 // 7) 모든 타입에 대해서 동작하는 스택을 만들어봅시다.
 //  => C++ Template
-
+//   : 템플릿은 소스파일과 헤더파일로 분리가 불가능합니다.
+//     템플릿은 헤더파일을 통해서만 제공 가능합니다.
+//   - boost 라이브러리는 템플릿 헤더 파일을 .hpp(.h + .cpp)라는 이름으로 제공합니다.
+#if 0
 template <typename TYPE>
 class Stack {
 private:
@@ -38,8 +41,13 @@ public:
         return buff[--top];
     }
 };
-
+#endif
 #include <string>
+
+#include "Stack.hpp"
+
+//      Stack: 클래스 템플릿
+// Stack<int>: 클래스 타입
 
 int main()
 {
