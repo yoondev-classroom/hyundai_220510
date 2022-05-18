@@ -76,6 +76,9 @@ int main()
 
 int main()
 {
+    vector<int> v2;
+    v2.reserve(10);
+
     list<int> v = { 10, 20, 30 }; // C++11
     cout << v.size() << endl;
 

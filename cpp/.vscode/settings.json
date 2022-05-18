@@ -66,6 +66,7 @@
     "iterator": "cpp",
     "utility": "cpp",
     "iomanip": "cpp",
-    "stack": "cpp"
+    "stack": "cpp",
+    "deque": "cpp"
   }
 }
