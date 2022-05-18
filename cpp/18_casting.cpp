@@ -49,6 +49,15 @@ void foo(int* p)
 
 int main()
 {
+    int x[5] = { 1, 21, 3, 4, 5 };
+    int sum = 0;
+    for (auto e : x) {
+        sum += e;
+    }
+
+    double avg = static_cast<double>(sum) / (sizeof(x) / sizeof(x[0]));
+    cout << avg << endl;
+
     volatile int n3 = 0;
     // &n3: volatile int*
     foo(const_cast<int*>(&n3));
