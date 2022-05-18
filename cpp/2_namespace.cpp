@@ -18,6 +18,7 @@ void VideoInit() { std::cout << "Video Init" << std::endl; }
 // 2. C++표준이 제공하는 전역함수/전역변수 등은 std 이름 공간안에
 //    존재합니다.
 // 3. 프로그램의 각 요소를 관련된 요소끼리 그룹화할 수 있습니다.
+// => Java의 package 개념과 유사합니다.
 
 // audio.cpp
 namespace audio {
