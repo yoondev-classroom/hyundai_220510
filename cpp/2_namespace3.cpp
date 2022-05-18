@@ -18,7 +18,20 @@ namespace std {
 
 #endif
 
+// ::foo
+// ::n
+// => 전역 이름 공간에 있는 심볼에 접근이 가능합니다.
+
+// Unnamed namespace: Internal linkage를 갖습니다.
+// static int n = 10;
+// static void foo() {}
+namespace {
+int n = 10;
+void foo() { }
+}
+
 int main()
 {
+    int n = 20;
     std::printf("Hello, world\n");
 }
