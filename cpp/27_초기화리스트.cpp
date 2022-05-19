@@ -11,10 +11,11 @@ using namespace std;
 //   2) 상수
 //   3) ???
 
+// 4. 초기화 리스트가 초기화 되는 순서는 멤버 데이터가 정의된 순서부터
+//    초기화됩니다.
 class Point {
     int x;
     int y;
-
     const int c;
     int& ry;
 
