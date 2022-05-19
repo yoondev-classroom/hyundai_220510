@@ -14,7 +14,6 @@ using namespace std;
 // 주의사항
 //  : 필드 초기화와 초기화 리스트를 사용할 경우,
 //    초기화 리스트가 우선됩니다.
-
 class User
 {
 private:
