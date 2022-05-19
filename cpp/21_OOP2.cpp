@@ -11,6 +11,7 @@ using namespace std;
 //      상태를 조작하는 함수가 일반 함수로 되어 있기
 //      때문입니다.
 
+// => 데이터 캡슐화
 struct Stack {
     int buff[10];
     int top;
