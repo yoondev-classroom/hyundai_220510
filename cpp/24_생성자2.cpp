@@ -48,11 +48,36 @@ public:
 // 1) 소멸자를 호출한다.
 // 2) 메모리를 해지한다.
 
+#if 0
 int main()
 {
     // Point* p1 = static_cast<Point*>(malloc(sizeof(Point)));
     // free(p1);
 
-    Point* p1 = new Point;
+    Point* p1 = new Point; // Point()
     delete p1;
+
+    Point* p2 = new Point { 10, 20 }; // Point(int, int)
+    // Point* p2 = new Point(10, 20);
+
+    delete p2;
+}
+#endif
+
+// 멤버 데이터 객체가 먼저 초기화되고, 객체의 생성자가 호출됩니다.
+class Rect {
+private:
+    Point leftTop;
+    Point rightBottom;
+
+public:
+    Rect()
+    {
+        cout << "Rect()" << endl;
+    }
+};
+
+int main()
+{
+    Rect r;
 }
