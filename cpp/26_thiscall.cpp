@@ -8,7 +8,7 @@ private:
     int y;
 
 public:
-    // void Set(Point* this, int a, int b)
+    // void Set(Point* const this, int a, int b)
     void Set(int a, int b)
     {
         x = a;
