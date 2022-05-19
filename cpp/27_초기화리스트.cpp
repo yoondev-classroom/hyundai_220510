@@ -9,29 +9,30 @@ using namespace std;
 //   => 아래 요소를 멤버 데이터로 가진 경우
 //   1) 레퍼런스
 //   2) 상수
-//   3) ???
+//   3) 기본 생성자를 제공하지 않는 멤버 객체
+//   4) ???
 
 // 4. 초기화 리스트가 초기화 되는 순서는 멤버 데이터가 정의된 순서부터
 //    초기화됩니다.
-class Point {
-    int x;
-    int y;
-    const int c;
-    int& ry;
+class Point
+{
+  int x;
+  int y;
+  const int c;
+  int &ry;
 
 public:
-    Point(int a, int b)
-        // : x(a), y(b)
-        : x { a }
-        , y { b }
-        , c { a } // 상수
-        , ry { b } // 참조
-    {
-        // 아래처럼 사용하는 것은 대입입니다.
-        // x = a;
-        // y = b;
-        // c = a;
-    }
+  Point(int a, int b)
+      // : x(a), y(b)
+      : x{a}, y{b}, c{a} // 상수
+        ,
+        ry{b} // 참조
+  {
+    // 아래처럼 사용하는 것은 대입입니다.
+    // x = a;
+    // y = b;
+    // c = a;
+  }
 };
 
 #if 0
