@@ -7,7 +7,9 @@ using namespace std;
 //   : 템플릿은 소스파일과 헤더파일로 분리가 불가능합니다.
 //     템플릿은 헤더파일을 통해서만 제공 가능합니다.
 //   - boost 라이브러리는 템플릿 헤더 파일을 .hpp(.h + .cpp)라는 이름으로 제공합니다.
-#if 0
+#if 1
+// template <class TYPE>
+
 template <typename TYPE>
 class Stack {
 private:

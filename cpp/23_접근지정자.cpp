@@ -26,6 +26,17 @@ public:
 
     // friend 함수 선언
     friend void PrintUser(const User& user);
+
+    // friend 클래스 선언
+    friend class UserPrinter;
+};
+
+class UserPrinter {
+public:
+    void Print(const User& user)
+    {
+        cout << user.name << ", " << user.age << endl;
+    }
 };
 
 void PrintUser(const User& user)
@@ -37,4 +48,7 @@ int main()
 {
     User user { "Tom", 42 };
     PrintUser(user);
+
+    UserPrinter printer;
+    printer.Print(user);
 }
