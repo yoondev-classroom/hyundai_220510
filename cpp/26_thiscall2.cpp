@@ -15,7 +15,8 @@ public:
         cout << "f2" << endl;
 
         if (this)
-            return data;
+            return this->data;
+        //     this->data
 
         return 100;
 
@@ -27,7 +28,7 @@ public:
 int main()
 {
     Test* p = nullptr;
-    p->f1(); // f1(p);
+    p->f1(); // f1(p); f1(nullptr)
 
     p->f2(); // f2(p);
 }
