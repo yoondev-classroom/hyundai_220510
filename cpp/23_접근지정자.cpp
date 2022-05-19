@@ -3,6 +3,8 @@
 #include <string>
 using namespace std;
 
+// OOP(객체 지향 프로그래밍)
+
 // 기본 접근지정자
 // 1. struct: public
 //     class: private
