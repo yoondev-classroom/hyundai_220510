@@ -19,6 +19,7 @@ class Rabbit : public Animal
 
 int main()
 {
+
   // 2. 동종을 보관하는 컨테이너를 사용할 수 있습니다.
   vector<Animal *> animals;
   animals.push_back(new Dog);
