@@ -7,4 +7,9 @@
 int foo(int a) { return 0; }
 // => _foo
 
-int main() {}
+int main()
+{
+  int a = 0;
+
+  // ++ ++ ++a;
+}
