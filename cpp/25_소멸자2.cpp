@@ -2,7 +2,8 @@
 #include <iostream>
 using namespace std;
 
-class User {
+class User
+{
 private:
     ~User()
     {
@@ -33,7 +34,16 @@ public:
 
 int main()
 {
-    User* p = new User;
+    {
+        // User u;
+        // 1. 지역 메모리 할당
+        // 2. 생성자 호출 코드
+        // ------------
+
+        // User::~User()
+    }
+
+    User *p = new User;
     // delete p; => 함수를 약속합니다.
     // 소멸자 호출 -> private
     // 메모리 해지
