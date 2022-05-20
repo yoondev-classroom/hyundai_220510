@@ -18,9 +18,9 @@ public:
     void Destroy()
     {
         // this: 멤버 함수에서 자기 자신의 주소를 얻을 수 있습니다.
-        delete this;
-        // 소멸자 호출
-        // 메모리 해지
+        // delete this;
+        // 1) 소멸자 호출
+        // 2) 메모리 해지
     }
 };
 
@@ -31,7 +31,6 @@ public:
 // 의도: 객체 생성을 힙에만 가능하도록 하겠다.
 
 // User user;
-
 int main()
 {
     {
@@ -44,6 +43,7 @@ int main()
     }
 
     User *p = new User;
+
     // delete p; => 함수를 약속합니다.
     // 소멸자 호출 -> private
     // 메모리 해지
@@ -52,3 +52,4 @@ int main()
     // p->Destroy(p);
     p->Destroy();
 }
+// User::~User()

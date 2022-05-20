@@ -49,6 +49,8 @@ int main()
 
   // 복사 생성자가 호출되는 경우
   Point p2 = p1;
+  // p2 = Point(p1)
+
   Point p3(p1);
   Point p4 = {p1};
   Point p5{p1};

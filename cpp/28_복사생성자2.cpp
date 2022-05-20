@@ -21,6 +21,7 @@ Point pt;
 
 // foo() -> 임시 객체(복사 + 파괴)
 // - 참조로 반환할 때는 지역 객체가 아니어야 합니다.
+// Point foo()
 Point &foo()
 {
   return pt;

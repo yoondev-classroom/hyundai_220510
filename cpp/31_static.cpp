@@ -18,6 +18,8 @@ using namespace std;
 //     2) 클래스
 // 4. 정적 멤버 변수는 객체를 생성하지 않아도 존재합니다.
 
+// int cnt;
+
 class Car
 {
 public:
@@ -41,6 +43,18 @@ int main()
 {
   Car c1;
   Car c2;
+
+  Car::cnt = 10;
+  cout << c1.cnt << endl;
+  cout << c2.cnt << endl;
+  cout << Car::cnt << endl;
+}
+
+#if 0
+int main()
+{
+  Car c1;
+  Car c2;
   Car c[10];
 
   cout << sizeof(c1) << endl;
@@ -53,3 +67,10 @@ int main()
   // 클래스를 통한 접근
   cout << Car::cnt << endl;
 }
+#endif
+
+// 클래스 템플릿 -> 클래스 -> 객체(object)
+//                       : 클래스의 인스턴스
+
+// 프로그램(실행 가능한 파일)
+// 프로세스(실행 중인 프로그램) : 프로그램의 인스턴스
