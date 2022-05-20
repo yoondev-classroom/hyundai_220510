@@ -26,6 +26,13 @@ public:
 
 int main()
 {
+  int n = 10;
+  int *p = &n;
+  int &r = *p;
+  r = 100;
+
+  cout << n << endl;
+
   Dog dog;
   Cat cat;
 
