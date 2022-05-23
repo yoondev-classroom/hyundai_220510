@@ -1,6 +1,6 @@
-\ // 39_연산자오버로딩.cpp
+// 39_연산자오버로딩.cpp
 #include <iostream>
-    using namespace std;
+using namespace std;
 
 class Point
 {
