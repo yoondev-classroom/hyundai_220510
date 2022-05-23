@@ -21,6 +21,9 @@ public:
 class Rect : public Shape
 {
 public:
+  // void Draw() { cout << "Rect draw" << endl; }
+  // virtual void Draw() { cout << "Rect draw" << endl; }
+  // virtual void Draw() override { cout << "Rect draw" << endl; }
   void Draw() override { cout << "Rect draw" << endl; }
 };
 
