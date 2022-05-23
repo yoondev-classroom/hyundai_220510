@@ -26,7 +26,8 @@ using namespace std;
 class Shape
 {
 public:
-  virtual void Draw() { cout << "Shape Draw" << endl; }
+  // virtual void Draw() { cout << "Shape Draw" << endl; }
+  virtual void Draw() = 0;
   virtual ~Shape() {}
 };
 
