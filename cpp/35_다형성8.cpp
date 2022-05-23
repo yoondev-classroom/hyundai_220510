@@ -69,7 +69,14 @@ int main()
     {
       shapes.push_back(new Triangle);
     }
-
+    else if (cmd == 0)
+    {
+      for (auto e : shapes)
+      {
+        delete e;
+      }
+      shapes.resize(0);
+    }
     else if (cmd == 9)
     {
       for (Shape *e : shapes)
