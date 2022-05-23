@@ -21,7 +21,7 @@ class DerivedDerived : public Derived
 {
 public:
   void f1() override {}
-  void f2() override {}
+  // void f2() override {}
 };
 
 int main()
