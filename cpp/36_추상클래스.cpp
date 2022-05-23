@@ -8,6 +8,9 @@ using namespace std;
 //    객체 생성이 불가능합니다.
 class Shape
 {
+  int x;
+  int y;
+
 public:
   // 1. 부모 입장에서 구현을 제공할 필요가 없고,
   // 2. 자식 클래스은 반드시 Draw를 오버라이딩해야 할 때
