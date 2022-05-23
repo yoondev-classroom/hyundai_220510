@@ -74,6 +74,9 @@ int main()
     cout << "Animal 타입 입니다." << endl;
   }
 #endif
+  const type_info &t1 = typeid(Dog);
+  cout << t1.name() << endl;
+  // C++에서 RTTI는 사용하지 않습니다.
 
   // dynamic_cast
   // => 타입을 조사해서, 타입이 다르면 nullptr을 반환합니다.
